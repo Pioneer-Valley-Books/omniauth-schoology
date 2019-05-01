@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.description = 'OAuth strategy for Schoology'
   spec.summary = 'OAuth strategy for Schoology'
   spec.homepage = 'https://github.com/hivedm/omniauth-strategies' #placeholder, haven't created the repo
-  spec.files = 'git ls-files'.split($/)
+  spec.files = `git ls-files`.split($/)
   spec.license = 'MIT'
 
   spec.add_runtime_dependency 'omniauth', '~> 1.9'
