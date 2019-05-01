@@ -1,7 +1,7 @@
 require './lib/omniauth/schoology/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'omniauth-strategies'
+  spec.name = 'omniauth-schoology'
   spec.version = OmniAuth::Schoology::VERSION
   spec.authors = ['Mark Evans']
   spec.email = ['msteven.evans@gmail.com']
