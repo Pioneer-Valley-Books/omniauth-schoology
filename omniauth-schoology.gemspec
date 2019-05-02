@@ -7,8 +7,13 @@ Gem::Specification.new do |spec|
   spec.email = ['msteven.evans@gmail.com']
   spec.description = 'OAuth strategy for Schoology'
   spec.summary = 'OAuth strategy for Schoology'
-  spec.homepage = 'https://github.com/hivedm/omniauth-strategies' #placeholder, haven't created the repo
-  spec.files = `git ls-files`.split($/)
+  spec.homepage = 'https://github.com/hivedm/omniauth-schoology' #placeholder, haven't created the repo
+
+  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  spec.require_paths = ["lib"]
+
   spec.license = 'MIT'
 
   spec.add_runtime_dependency 'omniauth', '~> 1.9'
