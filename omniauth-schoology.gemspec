@@ -1,4 +1,4 @@
-require './lib/omniauth/schoology/version'
+require File.expand_path('../lib/omniauth/schoology/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name = 'omniauth-schoology'
@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.summary = 'OAuth strategy for Schoology'
   spec.homepage = 'https://github.com/hivedm/omniauth-schoology' #placeholder, haven't created the repo
 
-  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  spec.files         = `git ls-files`.split("\n")
-  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  spec.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  spec.files = `git ls-files`.split("\n")
+  spec.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.license = 'MIT'

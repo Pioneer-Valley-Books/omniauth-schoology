@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-strategies (0.0.1)
+    omniauth-schoology (0.0.1)
       omniauth (~> 1.9)
       omniauth-oauth (~> 1.1.0)
 
@@ -52,7 +52,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  omniauth-strategies!
+  omniauth-schoology!
   pry
   rack-test
   rspec
