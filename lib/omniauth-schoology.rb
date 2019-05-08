@@ -1,1 +1,2 @@
-require "omniauth/schoology"
+require 'omniauth/schoology/version'
+require 'omniauth/strategies/schoology'

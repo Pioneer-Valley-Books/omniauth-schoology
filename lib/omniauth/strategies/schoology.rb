@@ -3,7 +3,7 @@ require 'omniauth-oauth'
 module OmniAuth
   module Strategies
     class Schoology < OmniAuth::Strategies::OAuth
-      option :name , 'schoology'
+      option :name, 'schoology'
 
       option :client_options, {
         http_method: 'get',
@@ -53,4 +53,10 @@ module OmniAuth
       end
     end
   end
+end
+
+# This is a hack to ensure this Strategy is added to Strategies since OAuth gem (unlike OAuth2 gem) does not call .included when it is inherited.
+#
+unless OmniAuth.strategies.include?(OmniAuth::Strategies::Schoology)
+  OmniAuth::Strategy.included(OmniAuth::Strategies::Schoology)
 end
