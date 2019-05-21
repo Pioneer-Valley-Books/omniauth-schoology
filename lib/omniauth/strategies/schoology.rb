@@ -23,7 +23,8 @@ module OmniAuth
         {
           :name => raw_info['name_display'],
           :email => raw_info['primary_email'],
-          :image => raw_info['picture_url']
+          :image => raw_info['picture_url'],
+          :school_id => raw_info['school_id']
         }
       end
 
