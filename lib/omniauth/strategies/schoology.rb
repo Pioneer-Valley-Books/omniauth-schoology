@@ -24,7 +24,9 @@ module OmniAuth
           :name => raw_info['name_display'],
           :email => raw_info['primary_email'],
           :image => raw_info['picture_url'],
-          :school_id => raw_info['school_id']
+          :school_id => raw_info['school_id'],
+          :username => raw_info['username'],
+          :school_uid => raw_info['school_uid'],
         }
       end
 
@@ -54,10 +56,4 @@ module OmniAuth
       end
     end
   end
-end
-
-# This is a hack to ensure this Strategy is added to Strategies since OAuth gem (unlike OAuth2 gem) does not call .included when it is inherited.
-#
-unless OmniAuth.strategies.include?(OmniAuth::Strategies::Schoology)
-  OmniAuth::Strategy.included(OmniAuth::Strategies::Schoology)
 end

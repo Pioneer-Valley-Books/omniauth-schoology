@@ -16,8 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.license = 'MIT'
 
-  spec.add_runtime_dependency 'omniauth', '~> 1.9'
-  spec.add_runtime_dependency 'omniauth-oauth', '~> 1.1.0'
+  spec.add_runtime_dependency 'omniauth-oauth', '>= 1.2'
 
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rack-test'
